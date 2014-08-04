@@ -5,6 +5,8 @@ source 'http://rubygems.org'
 # Also relative paths mean we can't install via bundler
 gem 'bourbon', :git => 'https://github.com/animade/bourbon.git', :branch => 'bourbon-3.2.0'
 
+gem 'neat'
+
 gem 'haml'
 
 gem "middleman", "~>3.3.3"

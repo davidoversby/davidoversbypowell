@@ -1,16 +1,12 @@
----
-title: Middleman boilerplate
----
+%main.container
+  
+  %header.page-header
+    .span-col-4
+      %h1 David Oversby-Powell
+    .span-col-4
+      =mail_to "contact@davidoversbypowell.com"
+    .span-col-4
+      +44 (0)7545 128 989
 
-/ Assets 
-
-- content_for(:javascripts) do
-  = javascript_include_tag  "app"
-
-- content_for(:stylesheets) do
-  = stylesheet_link_tag  "app"
-
-/ Haml
-
-%h1 Hello
-= image_tag "picard.gif"
+  %section.page-wrapper
+    %p Stuff here

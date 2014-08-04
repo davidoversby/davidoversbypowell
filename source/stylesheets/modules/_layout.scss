@@ -1,0 +1,27 @@
+@import "bourbon";
+@import 'neat';
+
+// Layout styles
+
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.page-header {
+  display: block;
+  width: 100%;
+}
+
+// Grid
+
+.span-col-3 {
+
+}
+
+.span-col-4 {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 33%;
+}
