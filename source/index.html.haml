@@ -1,0 +1,16 @@
+---
+title: Middleman boilerplate
+---
+
+/ Assets 
+
+- content_for(:javascripts) do
+  = javascript_include_tag  "app"
+
+- content_for(:stylesheets) do
+  = stylesheet_link_tag  "app"
+
+/ Haml
+
+%h1 Hello
+= image_tag "picard.gif"
