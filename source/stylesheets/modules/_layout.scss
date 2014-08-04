@@ -12,16 +12,24 @@
 .page-header {
   display: block;
   width: 100%;
+  padding: 2em 0;
 }
 
 // Grid
 
-.span-col-3 {
-
+%span-col {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 2%;
 }
 
 .span-col-4 {
-  display: inline-block;
-  vertical-align: bottom;
+  @extend %span-col;
   width: 33%;
 }
+
+.span-col-8 {
+  @extend %span-col;
+  width: 66%;
+}
+
