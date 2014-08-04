@@ -1,5 +1,5 @@
 // Vars (to go in a vars folder later)
-$base:14px;
+$base:14;
 
 // Typography
 
@@ -10,5 +10,5 @@ h1, h2, h3, h4, h5 {
 // Base styles
 
 body {
-  font-size: $base;
+  font-size: $base * 1px;
 }
