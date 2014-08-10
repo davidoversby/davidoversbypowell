@@ -29,3 +29,8 @@ end
 after_configuration do
   sprockets.append_path File.join root.to_s, "source/thirdparty"
 end
+
+# Add font folder
+# class_option "fonts_dir",
+#     :default => "css/fonts",
+#     :desc    => 'The path to the font files'

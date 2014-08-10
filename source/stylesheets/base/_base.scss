@@ -1,0 +1,23 @@
+// ==========================================================================
+//
+// Base CSS. 
+// Only include things which need to appear in *every* page
+//
+//
+
+// moved all into app
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+a {
+  color: inherit;
+}

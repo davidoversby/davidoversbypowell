@@ -1,5 +1,5 @@
-// Vars (to go in a vars folder later)
-$base:14;
+// Import source font
+@import url(http://fonts.googleapis.com/css?family=Source+Serif+Pro);
 
 // Typography
 
@@ -11,4 +11,62 @@ h1, h2, h3, h4, h5 {
 
 body {
   font-size: $base * 1px;
+}
+
+// Paragraph styles
+
+%serif {
+  font-family: 'Source Serif Pro', serif;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+%sans {
+  font-family: 'NeuzeitOfficeW01', sans-serif;
+  line-height: 1.5em;
+}
+
+h1 {
+  @extend %sans;
+}
+
+h2, .display {
+  @extend %sans;
+  font-size: 18 / $base * 1em;
+  font-weight: 600;
+}
+
+p {
+  @extend %serif;
+  margin-top: 0;
+}
+
+.copy {
+  @extend %serif;
+}
+
+// Character styles
+
+%light {
+  opacity: 0.4;
+}
+
+.year {
+  @extend %light;
+  margin-right: 24 / 18 * 1em;
+}
+
+.credit {
+  @extend %light;
+}
+
+// Page-header font adjustments
+
+.page-header {
+  h1 {
+    line-height: 0.9em;
+  }
+  .copy {
+    line-height: 1.3em;
+  }
 }

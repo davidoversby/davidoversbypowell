@@ -1,6 +1,16 @@
-//= require "base/base"
-//= require "base/helper"
-//= require "base/_vars"
+// require "base/base"
+// require "base/helper"
+// require "base/_vars"
 
-//= require "modules/_layout"
-//= require "modules/_typography"
+// require "modules/_layout"
+// require "modules/_typography"
+
+@import "../thirdparty/normalize-css/normalize";
+@import "bourbon";
+
+@import "base/base";
+@import "base/helper";
+@import "base/vars";
+
+@import "modules/layout";
+@import "modules/typography";
