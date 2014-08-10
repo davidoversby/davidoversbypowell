@@ -34,3 +34,5 @@ end
 # class_option "fonts_dir",
 #     :default => "css/fonts",
 #     :desc    => 'The path to the font files'
+
+set :fonts_dir,  "fonts-folder"
