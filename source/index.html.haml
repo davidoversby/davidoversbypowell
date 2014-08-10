@@ -15,11 +15,16 @@
     .span-col-8
       %ul.tracklist.display
         - data.content.tracks.each do |f|
-          %li.tracklist--item
-            %span.year=f.year
-            %span.track-title=f.text
-            %span.credit=f.credit
-            - if f.track
+          - if f.track
+            %li.tracklist--item.can-play.js-play-track{:data => {'track' => f.track}}
+              %span.year=f.year
+              %span.track-title=f.text
+              %span.credit=f.credit
               %span.fa.fa-play-circle.play-btn
+          - else
+            %li.tracklist--item
+              %span.year=f.year
+              %span.track-title=f.text
+              %span.credit=f.credit
 
 

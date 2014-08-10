@@ -33,3 +33,14 @@
 .align-bottom {
   vertical-align: bottom;
 }
+
+// Track list
+
+.can-play {
+  cursor: pointer;
+  &:hover {
+    .play-btn {
+      color: $red;
+    }
+  }
+}
