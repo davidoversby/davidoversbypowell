@@ -10,5 +10,5 @@
 //= require "../thirdparty/jquery/dist/jquery.js"
 //= require "../thirdparty/jquery.transit/jquery.transit.js"
 
-//= require modules/melt
+//= require modules/intro
 //= require modules/player

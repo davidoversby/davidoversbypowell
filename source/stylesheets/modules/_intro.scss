@@ -1,0 +1,19 @@
+.hide-for-intro {
+  opacity: 0;
+}
+
+.is-intro {
+  .main-title {
+    position: fixed;
+    top: 50%;
+    left: 1.2em;
+    width: auto;
+    text-align: center;
+    margin-top: -0.8em;
+    color: white;
+  }
+}
+
+body {
+  background: black;
+}
