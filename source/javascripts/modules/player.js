@@ -46,13 +46,38 @@
 
       SC.stream(path, function(sound) {
 
+        console.log(sound);
+
         // Play track
         sound.play();
 
         // Assign to a global variable
         self.currentTrack = sound;
 
+        // 
+        $('.js-play-text').text('Stop');
+
       });
+
+    },
+
+    showOverlay: function () {
+
+      var self = this;
+
+      $('.js-player-overlay').show().transition({
+        opacity: 0.9
+      }, 500);
+
+    },
+
+    hideOverlay: function () {
+
+      var self = this;
+
+      $('.js-player-overlay').transition({
+        opacity: 0
+      }, 500).hide();
 
     },
 
@@ -68,6 +93,8 @@
 
         self.authenticate();
         self.getData(track_url);
+
+        self.showOverlay();
 
         return false;
 
@@ -88,6 +115,18 @@
       $('.js-pause-track').click(function() {
 
         self.currentTrack.pause();
+
+        return false;
+
+      });
+
+      // Stop curretn track
+
+      $('.js-stop-track').click(function() {
+
+        self.currentTrack.pause();
+
+        self.hideOverlay();
 
         return false;
 
