@@ -33,6 +33,7 @@
       var resolve_url = 'http://api.soundcloud.com/resolve.json?url=' + url + '&client_id=' + s.client_id;
 
       $.get(resolve_url, function(data) {
+        // console.log(data);
         self.streamTrack(data.id);
       });
 
@@ -77,7 +78,10 @@
 
       $('.js-player-overlay').transition({
         opacity: 0
-      }, 500).hide();
+      }, 500, function () {
+        $('.js-player-overlay').hide();
+        $('.js-play-text').text('Loading...');
+      });
 
     },
 
