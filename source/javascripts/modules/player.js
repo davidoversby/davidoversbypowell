@@ -26,7 +26,7 @@
 
     },
 
-    getData: function(url) {
+    getData: function(url, title) {
 
       var self = this;
 
@@ -34,14 +34,18 @@
 
       $.get(resolve_url, function(data) {
         // console.log(data);
-        self.streamTrack(data.id);
+        self.streamTrack(data, title);
       });
 
     },
 
-    streamTrack: function(id) {
+    streamTrack: function(data, title) {
 
       var self = this;
+
+      var id = data.id;
+
+      console.log(data);
 
       var path = '/tracks/' + id;
 
@@ -56,7 +60,7 @@
         self.currentTrack = sound;
 
         // 
-        $('.js-play-text').text('Stop');
+        $('.js-play-text').text(title);
 
       });
 
@@ -94,9 +98,10 @@
       $('.js-load-track').click(function() {
 
         var track_url = $(this).attr('data-track');
+        var track_title = $(this).attr('data-track-title');
 
         self.authenticate();
-        self.getData(track_url);
+        self.getData(track_url, track_title);
 
         self.showOverlay();
 
@@ -134,6 +139,18 @@
 
         return false;
 
+      }).hover(function () {
+
+        this.current_track_text = $(this).text();
+
+        $(this).text('Stop');
+
+      }, function () {
+
+        var text = this.current_track_text;
+
+        $(this).text(text);
+
       });
 
       // Watch
@@ -141,10 +158,12 @@
       // setInterval(function() {
 
       //   if (self.currentTrack) {
-      //     var completed = self.currentTrack.position / self.currentTrack.duration * 100
-      //     console.log(completed + '%');
 
-      //     $('.js-timer').text(completed + '%');
+      //     var completed = self.currentTrack.position / self.currentTrack.duration * 100
+          
+      //     console.log(completed);
+
+      //     // $('.js-timer').text(completed + '%');
 
       //   }
 

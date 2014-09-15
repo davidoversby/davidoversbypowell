@@ -57,7 +57,7 @@
   z-index: 2;
   display: none;
   @include opacity(0);
-  @include background(linear-gradient(red, blue) top left repeat);
+  @include background(linear-gradient(left top, #fc0000 0%,#0004ff 100%));
   h1 {
     color: white;
     cursor: pointer;

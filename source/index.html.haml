@@ -21,7 +21,7 @@
       %ul.tracklist.display
         - data.content.tracks.each do |f|
           - if f.track
-            %li.tracklist--item.can-play.js-load-track{:data => {'track' => f.track}}
+            %li.tracklist--item.can-play.js-load-track{:data => {'track' => f.track, 'track-title' => f.text}}
               %span.year=f.year
               %span.track-title=f.text
               %span.credit=f.credit
