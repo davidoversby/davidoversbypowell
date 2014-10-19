@@ -10,10 +10,12 @@
 
   "use strict";
 
-  var Player = function() { this.init(); };
+  var Player = function() {
+    this.init();
+  };
 
   var s = {
-    client_id: '6af6c0bb87a90c1096f671171c3893fe'
+    client_id: 'd60cce6367364097aa089650f126228b'
   };
 
   Player.prototype = {
@@ -66,7 +68,7 @@
 
     },
 
-    showOverlay: function () {
+    showOverlay: function() {
 
       var self = this;
 
@@ -76,13 +78,13 @@
 
     },
 
-    hideOverlay: function () {
+    hideOverlay: function() {
 
       var self = this;
 
       $('.js-player-overlay').transition({
         opacity: 0
-      }, 500, function () {
+      }, 500, function() {
         $('.js-player-overlay').hide();
         $('.js-play-text').text('Loading...');
       });
@@ -139,13 +141,13 @@
 
         return false;
 
-      }).hover(function () {
+      }).hover(function() {
 
         this.current_track_text = $(this).text();
 
         $(this).text('Stop');
 
-      }, function () {
+      }, function() {
 
         var text = this.current_track_text;
 
@@ -160,7 +162,7 @@
       //   if (self.currentTrack) {
 
       //     var completed = self.currentTrack.position / self.currentTrack.duration * 100
-          
+
       //     console.log(completed);
 
       //     // $('.js-timer').text(completed + '%');
