@@ -139,19 +139,21 @@
 
         return false;
 
-      }).hover(function () {
-
-        this.current_track_text = $(this).text();
-
-        $(this).text('Stop');
-
-      }, function () {
-
-        var text = this.current_track_text;
-
-        $(this).text(text);
-
       });
+
+      // .hover(function () {
+
+      //   this.current_track_text = $(this).text();
+
+      //   $(this).text('Stop');
+
+      // }, function () {
+
+      //   var text = this.current_track_text;
+
+      //   $(this).text(text);
+
+      // });
 
       // Watch
 

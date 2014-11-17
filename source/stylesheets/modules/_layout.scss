@@ -60,6 +60,31 @@
   @include background(linear-gradient(left top, #fc0000 0%,#0004ff 100%));
   h1 {
     color: white;
-    cursor: pointer;
+    font-size: 3em;
+  }
+}
+
+// Close
+
+.close-btn {
+  display: block;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  width: 2em;
+  height: 2em;
+  margin-left: -1em;
+  background: white;
+  border-radius: 50%;
+  font-size: 2em;
+  padding: 0.4em 1em 1em 0.7em;
+  color: black;
+  z-index: 3;
+  font-weight: bold;
+  cursor: pointer;
+  @include transition(color 0.5s, background 0.5s);
+  &:hover {
+    color: white;
+    background: black;
   }
 }
