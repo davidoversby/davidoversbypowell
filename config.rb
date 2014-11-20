@@ -6,6 +6,7 @@ end
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+set :fonts_dir,  "fonts-folder"
 
 # Build-specific configuration
 configure :build do
@@ -21,6 +22,8 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
+  ignore 'bower_components/**/*'
+
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
@@ -34,8 +37,6 @@ end
 # class_option "fonts_dir",
 #     :default => "css/fonts",
 #     :desc    => 'The path to the font files'
-
-set :fonts_dir,  "fonts-folder"
 
 activate :deploy do |deploy|
   deploy.method = :git
