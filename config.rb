@@ -22,7 +22,7 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
-  ignore 'bower_components/**/*'
+  ignore 'thirdparty/**/*'
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
