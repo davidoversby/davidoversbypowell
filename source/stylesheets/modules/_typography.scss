@@ -50,6 +50,9 @@ h2, .display {
   @extend %sans;
   font-size: 18 / $base * 1em;
   font-weight: normal;
+  @include mq("small") {
+    font-size: 14 / $base * 1em;
+  }
 }
 
 p {
@@ -70,10 +73,17 @@ p {
 .year {
   @extend %light;
   margin-right: 24 / 18 * 1em;
+  @include mq("small") {
+    font-size: 0.75em;
+    margin-right: 0.5em;
+  }
 }
 
 .credit {
   @extend %light;
+  @include mq("small") {
+    display: none;
+  }
 }
 
 .play-btn {
@@ -89,4 +99,19 @@ p {
   .copy {
     line-height: 1.3em;
   }
+  @include mq("small") {
+    h1 {
+      font-size: 1.25em;
+      margin-bottom: 1em;
+    }
+  }
+  @include mq("medium") {
+    h1 {
+      line-height: 1.2em;
+    }
+  }
+}
+
+.tracklist {
+  line-height: 1.75em;
 }

@@ -29,3 +29,22 @@
     }
   }
 }
+
+$breakpoints: (
+  "extra-small" 500px,
+  "small" 700px,
+  "medium" 1047px,
+  "large" 1300px,
+  "extra-large" 1450px,
+  "extra-extra-large" 1800px
+);
+
+@mixin mq($size, $type: "max-width") { 
+  @each $breakpoint in $breakpoints {
+    @if ($size == nth($breakpoint, 1)) {
+      @media ($type: nth($breakpoint, 2)) {
+        @content;
+      }
+    }
+  }
+}

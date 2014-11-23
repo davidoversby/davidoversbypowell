@@ -10,6 +10,9 @@
   display: block;
   width: 100%;
   padding: 2em 0 4em;
+  @include mq("small") {
+    padding: 2em 0;
+  }
 }
 
 // Grid
@@ -23,15 +26,31 @@
 .span-col-4 {
   @extend %span-col;
   width: 33%;
+  @include mq("small") {
+    width: 100%;
+  }
 }
 
 .span-col-8 {
   @extend %span-col;
   width: 66%;
+  @include mq("small") {
+    width: 100%;
+  }
 }
 
 .align-bottom {
   vertical-align: bottom;
+}
+
+// Header
+
+.page-header {
+  @include mq("medium") {
+    .span-col-4 {
+      vertical-align: middle;
+    }
+  }
 }
 
 // Track list

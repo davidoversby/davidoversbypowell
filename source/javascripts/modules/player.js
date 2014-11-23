@@ -34,8 +34,9 @@
 
       var resolve_url = 'http://api.soundcloud.com/resolve.json?url=' + url + '&client_id=' + s.client_id;
 
-      $.get(resolve_url, function(data) {
-        // console.log(data);
+      SC.get('/resolve', {
+        url: url
+      }, function(data) {
         self.streamTrack(data, title);
       });
 
@@ -47,13 +48,9 @@
 
       var id = data.id;
 
-      console.log(data);
-
       var path = '/tracks/' + id;
 
       SC.stream(path, function(sound) {
-
-        console.log(sound);
 
         // Play track
         sound.play();
@@ -97,6 +94,8 @@
 
       var self = this;
 
+      self.authenticate();
+
       // Play track
 
       $('.js-load-track').click(function() {
@@ -106,7 +105,6 @@
         var color_one = $(this).attr('data-color-one');
         var color_two = $(this).attr('data-color-two');
 
-        self.authenticate();
         self.getData(track_url, track_title);
 
         self.showOverlay(color_one, color_two);
@@ -146,36 +144,6 @@
         return false;
 
       });
-
-      // .hover(function () {
-
-      //   this.current_track_text = $(this).text();
-
-      //   $(this).text('Stop');
-
-      // }, function () {
-
-      //   var text = this.current_track_text;
-
-      //   $(this).text(text);
-
-      // });
-
-      // Watch
-
-      // setInterval(function() {
-
-      //   if (self.currentTrack) {
-
-      //     var completed = self.currentTrack.position / self.currentTrack.duration * 100
-
-      //     console.log(completed);
-
-      //     // $('.js-timer').text(completed + '%');
-
-      //   }
-
-      // }, 300);
 
 
     },
