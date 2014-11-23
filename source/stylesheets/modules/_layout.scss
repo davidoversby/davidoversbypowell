@@ -57,7 +57,7 @@
   z-index: 2;
   display: none;
   @include opacity(0);
-  @include background(linear-gradient(left top, #fc0000 0%,#0004ff 100%));
+  @include background(linear-gradient(left top, #000 0%, #444 100%));
   h1 {
     color: white;
     font-size: 3em;

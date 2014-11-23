@@ -3,21 +3,43 @@ about:
 
 tracks:
 - year: "2014"
-  text: "Fyfe — For You LP"
+  text: "Fyfe — Holding On"
+  credit: "Mixing"
+  track: "https://soundcloud.com/thisisfyfe/holding-on"
+  color_one: "#fc0000"
+  color_two: "#0004ff"
+- year: "2014"
+  text: "Fyfe — For You"
   credit: "Mixing"
   track: "https://soundcloud.com/thisisfyfe/for-you"
+  color_one: "#f03600"
+  color_two: "#f9cc0f"
+- year: "2014"
+  text: "Emirates — Soar"
+  credit: "Mixing/String Recording"
+- year: "2014"
+  text: "Kelly Lee Owens — Lucid"
+  credit: "Mixing"
+  track: "https://soundcloud.com/kellyleeowens/lucid-1"
+  color_one: "#131560"
+  color_two: "#89FFE3"
 - year: "2014"
   text: "Brontide — Artery LP"
   credit: "Production/Mixing/Engineering"
+  track: "https://soundcloud.com/david-oversby-powell-2/test1"
+  color_one: "#840B3A"
+  color_two: "#C92828"
 - year: "2014"
-  text: "Dead Red Sun — Orator/Grecian EP"
+  text: "Dead Red Sun — Grecian"
   credit: "Production/Mixing/Engineering"
-  track: "https://soundcloud.com/david-oversby-powell-2/lucid-mix-r11-limited/s-ysjJa"
+  track: "https://soundcloud.com/deadredsun/grecian"
+  color_one: "#2BDBAC"
+  color_two: "#EA1815"
 - year: "2013"
-  text: "Assistant for James Sanger"
+  text: "Assistant for James Sanger (Dido, Keane, Brian Eno)"
   credit: null
 - year: "2013"
-  text: "Assistant/Drum Editing/Engineering for Julian Kindred"
+  text: "Assistant for Julian Kindred (Ellie Goulding, Michele Stodart)"
   credit: null
 - year: "2013"
   text: "Fyfe — Solace EP"
@@ -46,3 +68,22 @@ tracks:
 - year: "2012"
   text: "Brontide — BeatCast Live Session"
   credit: "Engineering"
+
+
+# 2014 Fyfe - Holding On Mixing 
+# 2014 Fyfe — For You Mixing
+# 2014 Emirates - Soar Mixing/String Recording
+# 2014 Kelly Lee Owens - Lucid Mixing
+# 2014 Brontide — Artery LP Production/Mixing/Engineering
+# 2014 Dead Red Sun — Grecian Production/Mixing/Engineering
+# 2013 Assistant for James Sanger (Dido, Keane, Brian Eno)
+# 2013 Assistant for Julian Kindred (Ellie Goulding, Michele Stodart) 
+# 2013 Fyfe — Solace EP Engineering
+# 2013 Brontide — Coloured Tounges EP Production/Mixing/Engineering
+# 2013 Glyndebourne Opera House Vocal Production
+# 2012 Ellie Goulding - Halycon UK Tour Pro-Tools Consultant
+# 2012 Peace — Vials Demo Engineering
+# 2012 65daysofstatic — BeatCast Live Session Mixing/Engineering
+# 2012 Lanterns on the Lake — BeatCast Live Session Mixing/Engineering
+# 2012 Tera Melos — BeatCast Live Session Mixing/Engineering
+# 2012 Brontide — BeatCast Live Session Mixing/Engineering

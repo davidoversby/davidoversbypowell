@@ -10,7 +10,9 @@
 
   "use strict";
 
-  var Player = function() { this.init(); };
+  var Player = function() {
+    this.init();
+  };
 
   var s = {
     client_id: '6af6c0bb87a90c1096f671171c3893fe'
@@ -66,23 +68,25 @@
 
     },
 
-    showOverlay: function () {
+    showOverlay: function(from, to) {
 
       var self = this;
 
-      $('.js-player-overlay').show().transition({
+      $('.js-player-overlay').transition({
+        'background': 'linear-gradient(to right bottom, ' + from + ' 0%, ' + to + ' 100%)'
+      }, 0).show().transition({
         opacity: 0.9
       }, 500);
 
     },
 
-    hideOverlay: function () {
+    hideOverlay: function() {
 
       var self = this;
 
       $('.js-player-overlay').transition({
         opacity: 0
-      }, 500, function () {
+      }, 500, function() {
         $('.js-player-overlay').hide();
         $('.js-play-text').text('Loading...');
       });
@@ -99,11 +103,13 @@
 
         var track_url = $(this).attr('data-track');
         var track_title = $(this).attr('data-track-title');
+        var color_one = $(this).attr('data-color-one');
+        var color_two = $(this).attr('data-color-two');
 
         self.authenticate();
         self.getData(track_url, track_title);
 
-        self.showOverlay();
+        self.showOverlay(color_one, color_two);
 
         return false;
 
@@ -162,7 +168,7 @@
       //   if (self.currentTrack) {
 
       //     var completed = self.currentTrack.position / self.currentTrack.duration * 100
-          
+
       //     console.log(completed);
 
       //     // $('.js-timer').text(completed + '%');
