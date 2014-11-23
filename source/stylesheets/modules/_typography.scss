@@ -1,5 +1,16 @@
 // Import source font
 @import url(http://fonts.googleapis.com/css?family=Source+Serif+Pro);
+@import url(//hello.myfonts.net/count/2ca7ba);
+
+// Include Neuzeit
+@font-face {
+  font-family: 'NeuzeitSLTStd-BookHeavy';
+  src: url('../fonts/2CA7BA_0_0.eot');
+  src: url('../fonts/2CA7BA_0_0.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/2CA7BA_0_0.woff2') format('woff2'),
+  url('../fonts/2CA7BA_0_0.woff') format('woff'),
+  url('../fonts/2CA7BA_0_0.ttf') format('truetype');
+}
 
 // Font awesome
 $fa-enable-utilities: false;
@@ -26,18 +37,19 @@ body {
 }
 
 %sans {
-  font-family: 'NeuzeitOfficeW01', sans-serif;
+  font-family: 'NeuzeitSLTStd-BookHeavy', sans-serif;
   line-height: 1.5em;
 }
 
 h1 {
   @extend %sans;
+  font-weight: normal;
 }
 
 h2, .display {
   @extend %sans;
   font-size: 18 / $base * 1em;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 p {
