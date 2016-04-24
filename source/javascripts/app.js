@@ -6,7 +6,7 @@
 // 
 // -------------------------------------------------
 
-//= require "../thirdparty/modernizr/modernizr.js"
+// require "../thirdparty/modernizr/src/Modernizr.js"
 //= require "../thirdparty/jquery/dist/jquery.js"
 //= require "../thirdparty/jquery.transit/jquery.transit.js"
 

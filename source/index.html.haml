@@ -16,22 +16,30 @@
 
   %section.page-wrapper.hide-for-intro
     .span-col-4
-      %p David Oversby-Powell is a Producer & Mixer based in London at The Premises Studios.
-      %p Mentored by Mandy Parnell (Björk, The XX), David has spent the last 7 years honing his skills alongside the likes of Julian Kindred (Ellie Goulding) and James Sanger (Dido, Keane, Brian Eno), as well as establishing his own studio. The 24-year-old, already the mix engineer of choice for acts such as Fyfe (Believe Recordings) and Brontide (Holy Roar Records), also has experience of commercial mixing recently completing an advert for Emirates. 
-
+      %p David Oversby-Powell is a Mixer and Producer based in London at The Premises Studios. Mentored by Mandy Parnell (Bjork, The XX), David has spent the last 9 years honing his skills.
+      %p Recent work includes mixing of Kelly Lee Owens.
+      %blockquote
+        %p 
+          "1 of 3 - Glowing magic-hour production"
+          %br/
+          —Pitchfork
       %p 
-        David is capable of both collaborating in elevating bedroom demos, and engineering and mixing in SSL and Neve studios. He owns a broad range of equipment himself including Prism, Neumann & Coles. A full equipment list is available 
-        %a{:href => 'images/equipment.pdf', :target => '_blank'} here.
+        If you would like to know more please contact me below.
+      %p
+        %a{:href => 'mailto:contact@davidoversbypowell.com'} contact@davidoversbypowell.com
+        %br
+        +44 (0) 7545 128989
 
     .span-col-8
       %ul.tracklist.display
         - data.content.tracks.each do |f|
           - if f.track
-            %li.tracklist--item.can-play.js-load-track{:data => {'track' => f.track, 'track-title' => f.text, 'color_one' => f.color_one, 'color_two' => f.color_two}}
-              %span.year=f.year
-              %span.track-title=f.text
-              %span.credit=f.credit
-              %span.fa.fa-play-circle.play-btn
+            %li.tracklist--item.can-play{:data => {'track' => f.track, 'track-title' => f.text, 'color_one' => f.color_one, 'color_two' => f.color_two}}
+              %a{:href => f.track, :target => '_blank'}
+                %span.year=f.year
+                %span.track-title=f.text
+                %span.credit=f.credit
+                %span.fa.fa-play-circle.play-btn
           - else
             %li.tracklist--item
               %span.year=f.year
